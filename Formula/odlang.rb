@@ -11,7 +11,7 @@ class Odlang < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.6/od_0.1.6_darwin_amd64.tar.gz"
-      sha256 "6c69c0c63b8beba0ff2321c19cd94d75410215324180c33d9e5319e78d022471"
+      sha256 "7fc8710af1428b64a85a050f56366932d3c652a2d2433d9e27b2167e0c69b9a3"
 
       define_method(:install) do
         bin.install "odlang"
@@ -19,7 +19,7 @@ class Odlang < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.6/od_0.1.6_darwin_arm64.tar.gz"
-      sha256 "b88451a2377cd536dba994a398b9e4f95c1beaf64b9cc125034e1102c7bb80bc"
+      sha256 "f0770e182a5fe24d53d92060aaf7a88e52abac13edcc59def688aa11f403af16"
 
       define_method(:install) do
         bin.install "odlang"
@@ -30,14 +30,14 @@ class Odlang < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.6/od_0.1.6_linux_amd64.tar.gz"
-      sha256 "1c52f965054158a4068c5e99b8e38b8d4735727ef01534af307c096ed452d47c"
+      sha256 "efdb46c723e7de3768d7395c051810ecc585c66f36fa87614b5eec560df38c04"
       define_method(:install) do
         bin.install "odlang"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.6/od_0.1.6_linux_arm64.tar.gz"
-      sha256 "bccdb6f07accda57177f6bfb1761be7ce26747964477cd7c1e134d2fa0a00764"
+      sha256 "bfae128c5e21c58d364279283ee5c2229cf8faa1c06994abd75149014ab65506"
       define_method(:install) do
         bin.install "odlang"
       end
