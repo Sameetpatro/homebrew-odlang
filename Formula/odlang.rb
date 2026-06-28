@@ -5,46 +5,46 @@
 class Odlang < Formula
   desc "OdLang — a programming language with Odia-inspired keywords"
   homepage "https://github.com/Sameetpatro/odlang"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.5/od_0.1.5_darwin_amd64.tar.gz"
-      sha256 "7074b26af327753191dbba672c35690c3d8516c9d70ed62e297f6d232df87cb8"
+      url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.6/od_0.1.6_darwin_amd64.tar.gz"
+      sha256 "6c69c0c63b8beba0ff2321c19cd94d75410215324180c33d9e5319e78d022471"
 
       define_method(:install) do
-        bin.install "od"
+        bin.install "odlang"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.5/od_0.1.5_darwin_arm64.tar.gz"
-      sha256 "288b69de3d24a88c2e15de4710749fd438edec2548726edb8dec2e36f67a8ba3"
+      url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.6/od_0.1.6_darwin_arm64.tar.gz"
+      sha256 "b88451a2377cd536dba994a398b9e4f95c1beaf64b9cc125034e1102c7bb80bc"
 
       define_method(:install) do
-        bin.install "od"
+        bin.install "odlang"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.5/od_0.1.5_linux_amd64.tar.gz"
-      sha256 "8f76ff45951ca7f63840b8dbe668e8a75aee1d1fc5589e10d1aca571c97eabf2"
+      url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.6/od_0.1.6_linux_amd64.tar.gz"
+      sha256 "1c52f965054158a4068c5e99b8e38b8d4735727ef01534af307c096ed452d47c"
       define_method(:install) do
-        bin.install "od"
+        bin.install "odlang"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.5/od_0.1.5_linux_arm64.tar.gz"
-      sha256 "212f75b7c019de0fcc01b67533ffbcb6584ef79e7380abee14a02955bdca9ec3"
+      url "https://github.com/Sameetpatro/odlang/releases/download/v0.1.6/od_0.1.6_linux_arm64.tar.gz"
+      sha256 "bccdb6f07accda57177f6bfb1761be7ce26747964477cd7c1e134d2fa0a00764"
       define_method(:install) do
-        bin.install "od"
+        bin.install "odlang"
       end
     end
   end
 
   test do
-    system "#{bin}/od", "version"
+    system "#{bin}/odlang", "version"
   end
 end
